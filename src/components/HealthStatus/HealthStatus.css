@@ -1,0 +1,33 @@
+.health-status {
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.health-status__title {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.health-status__loading {
+    color: #666;
+}
+
+.health-status__error {
+    color: #dc3545;
+}
+
+.health-status__info {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.health-status__info p {
+    margin: 0;
+}
+
+.health-status__info span {
+    font-weight: 500;
+    color: #0066cc;
+}
