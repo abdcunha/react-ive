@@ -1,8 +1,18 @@
 import { useState, useEffect } from "react";
 import type { HealthResponse } from "../types/HealthResponse";
+import { healthApi } from "../services/api";
 
 export const useHealth = () => {
-    const [health, setHealth] = useState<HealthResponse | null>(null);
+    const [health, setHealth] = useState<{
+        health: HealthResponse | null;
+        error: string;
+        loading: boolean;
+    }>({
+        health: null,
+        error: "",
+        loading: true
+    });
+    
     const [error, setError] = useState<string>("");
     const [loading, setLoading] = useState(true);
 
