@@ -3,7 +3,7 @@ import type { HealthResponse } from "../types/HealthResponse";
 import { healthApi } from "../services/api";
 
 export const useHealth = () => {
-    const [health, setHealth] = useState<{
+    const [state, setState] = useState<{
         health: HealthResponse | null;
         error: string;
         loading: boolean;
@@ -13,25 +13,37 @@ export const useHealth = () => {
         loading: true
     });
     
-    const [error, setError] = useState<string>("");
-    const [loading, setLoading] = useState(true);
-
     useEffect(() => {
+        let mounted = true;
+
         const checkHealth = async () => {
             try {
-                const response = await fetch("http://localhost:3000/health");
-                const data = await response.json();
-                setHealth(data);
-                setError("");
+                const data = await healthApi.checkHealth();
+                if (mounted) {
+                    setState(prev => ({
+                        ...prev,
+                        health: data,
+                        error: "",
+                        loading: false
+                    }));
+                }
             } catch (err) {
-                setError("Failed to connect to backend");
-            } finally {
-                setLoading(false);
+                if (mounted) {
+                    setState(prev => ({
+                        ...prev,
+                        error: "Failed to connect to backend",
+                        loading: false
+                    }));
+                }
             }
         };
 
         checkHealth();
+
+        return () => {
+            mounted = false;
+        }
     }, []);
 
-    return { health, error, loading };
+    return state;
 };
