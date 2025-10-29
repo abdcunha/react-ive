@@ -6,14 +6,14 @@ function App() {
   const { health, error, loading } = useHealth();
 
   return (
-    <>
+    <div className="app">
       <HealthStatus
         health={health}
         error={error}
         loading={loading}
       />
-    </>
+    </div>
   );
-}
+};
 
 export default App;
