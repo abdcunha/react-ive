@@ -10,6 +10,6 @@ export const healthApi = {
             throw new Error('Health check failed');
         }
 
-        return response.json();
+        return response.json() ;
     }
 };
