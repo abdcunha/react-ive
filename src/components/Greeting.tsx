@@ -5,7 +5,7 @@ type GreetingProps = {
 };
 
 const Greeting: React.FC<GreetingProps> = ({ name }) => {
-    return <h2>Hello, {name}Q</h2>
+    return <h2>Hello, {name}!</h2>
 };
 
 export default Greeting;
