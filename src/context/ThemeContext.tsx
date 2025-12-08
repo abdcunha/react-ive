@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
 
-
 type Theme = "light" | "dark";
 
 const ThemeContext = createContext<{ theme: Theme, toggle: () => void } | undefined>(undefined);
