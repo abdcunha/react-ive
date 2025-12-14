@@ -28,6 +28,7 @@ export const useHealth = () => {
                     }));
                 }
             } catch (err) {
+                console.error(err);
                 if (mounted) {
                     setState(prev => ({
                         ...prev,
