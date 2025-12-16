@@ -4,7 +4,7 @@ import { useHealth } from "./hooks/useHealth";
 import Greeting from "./components/Greeting";
 import Counter from "./components/Counter";
 import Timer from "./components/Timer";
-import { ThemeProvider } from "./context/ThemeContext";
+import { ThemeProvider } from "./context/ThemeContextProvider";
 import { useTheme } from "./context/useTheme";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import ExpensiveCalculation from "./components/ExpensiveCalculation";
