@@ -1,10 +1,10 @@
 import "./App.css";
-import { HealthStatus } from "./components/HealthStatus";
+import HealthStatus from "./components/HealthStatus/HealthStatus";
 import { useHealth } from "./hooks/useHealth";
 import Greeting from "./components/Greeting";
 import Counter from "./components/Counter";
 import Timer from "./components/Timer";
-import { ThemeProvider } from "./context/ThemeContextProvider";
+import { ThemeProvider } from "./context/ThemeProvider";
 import { useTheme } from "./context/useTheme";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import ExpensiveCalculation from "./components/ExpensiveCalculation";

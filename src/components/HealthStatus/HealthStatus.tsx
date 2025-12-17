@@ -1,8 +1,8 @@
 import { memo } from "react";
-import type { HealthStatusProps } from "../types/HealthStatusProps";
+import type { HealthStatusProps } from "../../types/HealthStatusProps";
 
 
-export const HealthStatus = memo(({health, error, loading}: HealthStatusProps) => {
+const HealthStatus = memo(({health, error, loading}: HealthStatusProps) => {
     const renderContent = () => {
         if (loading) {
             return <p className="health-status__loading">Loading...</p>;
@@ -14,7 +14,7 @@ export const HealthStatus = memo(({health, error, loading}: HealthStatusProps) =
 
         return (
             <div className="health-status__info">
-                <p>Status: <span>{health?.timestamp}</span></p>
+                <p>Status: <span>{health?.status}</span></p>
                 <p>Last Updated: <span>{health?.timestamp}</span></p>
                 <p>Uptime: <span>{health?.uptime.toFixed(2)}</span></p>
             </div>
@@ -30,3 +30,5 @@ export const HealthStatus = memo(({health, error, loading}: HealthStatusProps) =
 });
 
 HealthStatus.displayName = "HealthStatus";
+
+export default HealthStatus;
