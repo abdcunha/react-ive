@@ -19,6 +19,7 @@ export const useHealth = () => {
         const checkHealth = async () => {
             try {
                 const data = await healthApi.checkHealth();
+                data.timestamp = new Date(data.timestamp).toDateString();
                 if (mounted) {
                     setState(prev => ({
                         ...prev,
