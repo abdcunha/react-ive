@@ -1,4 +1,4 @@
 import React from "react";
+import type { Theme } from "../types/Theme";
 
-export type Theme = "light" | "dark";
 export const ThemeContext = React.createContext<{ theme: Theme; toggle: () => void } | undefined>(undefined);
