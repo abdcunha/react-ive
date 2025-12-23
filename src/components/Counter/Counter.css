@@ -1,3 +1,8 @@
 .counter-wrapper {
     display: flex;
+    justify-content: center;
+}
+
+.counter-wrapper > p {
+    margin: 1rem;
 }
