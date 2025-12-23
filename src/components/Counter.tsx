@@ -5,8 +5,9 @@ const Counter: React.FC = () => {
 
     return (
         <div>
+            <button onClick={() => setCount(count - 1)}> - </button>
             <p>Count: {count}</p>
-            <button onClick={() => setCount(count + 1)}>Add</button>
+            <button onClick={() => setCount(count + 1)}> + </button>
         </div>
     );
 };
