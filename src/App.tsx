@@ -2,7 +2,7 @@ import "./App.css";
 import HealthStatus from "./components/HealthStatus/HealthStatus";
 import { useHealth } from "./hooks/useHealth";
 import Greeting from "./components/Greeting";
-import Counter from "./components/Counter";
+import Counter from "./components/Counter/Counter";
 import Timer from "./components/Timer";
 import { ThemeProvider } from "./context/ThemeProvider";
 import { useTheme } from "./context/useTheme";
@@ -17,7 +17,7 @@ const ThemedApp: React.FC = () => {
   return (
 
     <div className={theme === "dark" ? "dark-theme" : "light-theme"}>
-      <Greeting name="World!" />
+      <Greeting name="World" />
       <Counter />
       <Timer />
       <ThemeSwitcher />

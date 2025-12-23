@@ -1,6 +1,6 @@
 import { memo } from "react";
 import type { HealthStatusProps } from "../../types/HealthStatusProps";
-
+import './HealthStatus.css';
 
 const HealthStatus = memo(({health, error, loading}: HealthStatusProps) => {
     const renderContent = () => {
