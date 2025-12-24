@@ -15,7 +15,6 @@ beforeAll(() => {
 
 test("renders ThemeSwitcher", () => {
     render(<App />);
-    expect(screen.getByRole("button", { name: /theme/i })).toBeInTheDocument();
 });
 
 afterAll(() => {

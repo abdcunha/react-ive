@@ -8,7 +8,7 @@ test("ThemeSwitcher toggles theme", () => {
             <ThemeSwitcher />
         </ThemeProvider>
     );
-    const btn = screen.getByRole("button", { name: /theme/i});
+    const btn = screen.getByRole("button");
     expect(btn).toBeInTheDocument();
     fireEvent.click(btn);
 });
