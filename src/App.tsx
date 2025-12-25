@@ -1,14 +1,14 @@
 import "./App.css";
 import HealthStatus from "./components/HealthStatus/HealthStatus";
 import { useHealth } from "./hooks/useHealth";
-import Greeting from "./components/Greeting";
+import Greeting from "./components/Greeting/Greeting";
 import Counter from "./components/Counter/Counter";
-import Timer from "./components/Timer";
+import Timer from "./components/Timer/Timer";
 import { ThemeProvider } from "./context/ThemeProvider";
 import { useTheme } from "./context/useTheme";
-import ThemeSwitcher from "./components/ThemeSwitcher";
-import ExpensiveCalculation from "./components/ExpensiveCalculation";
-import WindowWidth from "./components/WindowWidth";
+import ThemeSwitcher from "./components/ThemeSwitcher/ThemeSwitcher";
+import ExpensiveCalculation from "./components/ExpensiveCalculation/ExpensiveCalculation";
+import WindowWidth from "./components/WindowWidth/WindowWidth";
 
 const ThemedApp: React.FC = () => {
   const { theme } = useTheme();

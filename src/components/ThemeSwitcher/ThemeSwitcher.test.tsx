@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import ThemeSwitcher from "./ThemeSwitcher";
-import { ThemeProvider } from "../context/ThemeProvider";
+import { ThemeProvider } from "../../context/ThemeProvider";
 
 test("ThemeSwitcher toggles theme", () => {
     render(
