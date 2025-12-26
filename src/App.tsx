@@ -9,6 +9,7 @@ import { useTheme } from "./context/useTheme";
 import ThemeSwitcher from "./components/ThemeSwitcher/ThemeSwitcher";
 import ExpensiveCalculation from "./components/ExpensiveCalculation/ExpensiveCalculation";
 import WindowWidth from "./components/WindowWidth/WindowWidth";
+import UserForm from "./components/UserForm.tsx/UserForm";
 
 const ThemedApp: React.FC = () => {
   const { theme } = useTheme();
@@ -17,7 +18,8 @@ const ThemedApp: React.FC = () => {
   return (
 
     <div className={theme === "dark" ? "dark-theme" : "light-theme"}>
-      <Greeting name="World" />
+      <UserForm />
+      {/* <Greeting name="World" /> */}
       <Counter />
       <Timer />
       <ThemeSwitcher />
