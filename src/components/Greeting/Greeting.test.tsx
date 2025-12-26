@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Greeting from "./Greeting/Greeting";
+import Greeting from "./Greeting";
 
 test("Greeting displays a message", () => {
     render(<Greeting name="world!" />);
