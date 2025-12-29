@@ -19,7 +19,7 @@ const TodoList: React.FC = () => {
             <button onClick={addTodo}>Add</button>
             <ul>
                 {todos.map(todo => (
-                    <li
+                    <li 
                         key={todo.id}
                         style={{ textDecoration: todo.done ? "line-through" : "none" }}
                         onClick={() => {
