@@ -9,6 +9,7 @@ import ThemeSwitcher from "./components/ThemeSwitcher/ThemeSwitcher";
 import ExpensiveCalculation from "./components/ExpensiveCalculation/ExpensiveCalculation";
 import WindowWidth from "./components/WindowWidth/WindowWidth";
 import UserForm from "./components/UserForm.tsx/UserForm";
+import DadJoke from "./components/DadJoke/DadJoke";
 
 const ThemedApp: React.FC = () => {
   const { theme } = useTheme();
@@ -22,6 +23,7 @@ const ThemedApp: React.FC = () => {
       <Timer />
       <ThemeSwitcher />
       <ExpensiveCalculation />
+      <DadJoke />
       <WindowWidth />
       <HealthStatus
         health={health}

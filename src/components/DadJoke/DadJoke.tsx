@@ -4,7 +4,12 @@ const DadJoke: React.FC = () => {
     const [joke, setJoke] = useState<string>("");
 
     const fetchJoke = async () => {
-        const res = await fetch("https://icanhazdadjoke.com/");
+        const options = {
+            headers: {
+                "Accept": "application/json"
+            }
+        }
+        const res = await fetch("https://icanhazdadjoke.com/", options);
         const data = await res.json();
         setJoke(data.joke);
     }
