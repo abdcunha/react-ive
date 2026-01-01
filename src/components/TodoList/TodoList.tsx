@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-
-type Todo = { id: number; text: string; done: boolean };
+import type { Todo } from "../../types/Todo";
 
 const TodoList: React.FC = () => {
     const [todos, setTodos] = useState<Todo[]>([]);
