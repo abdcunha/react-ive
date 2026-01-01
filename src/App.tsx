@@ -10,6 +10,7 @@ import ExpensiveCalculation from "./components/ExpensiveCalculation/ExpensiveCal
 import WindowWidth from "./components/WindowWidth/WindowWidth";
 import UserForm from "./components/UserForm.tsx/UserForm";
 import DadJoke from "./components/DadJoke/DadJoke";
+import TodoList from "./components/TodoList/TodoList";
 
 const ThemedApp: React.FC = () => {
   const { theme } = useTheme();
@@ -25,6 +26,7 @@ const ThemedApp: React.FC = () => {
       <ExpensiveCalculation />
       <DadJoke />
       <WindowWidth />
+      <TodoList />
       <HealthStatus
         health={health}
         error={error}
