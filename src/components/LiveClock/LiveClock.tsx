@@ -8,7 +8,7 @@ const LiveClock: React.FC = () => {
         return () => clearInterval(timer);
     });
 
-    return <div>{now.toLocaleDateString()}</div>;
+    return <div>{now.toLocaleTimeString()}</div>;
 };
 
 export default LiveClock;
