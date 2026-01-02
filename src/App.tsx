@@ -11,6 +11,7 @@ import WindowWidth from "./components/WindowWidth/WindowWidth";
 import UserForm from "./components/UserForm.tsx/UserForm";
 import DadJoke from "./components/DadJoke/DadJoke";
 import TodoList from "./components/TodoList/TodoList";
+import LiveClock from "./components/LiveClock/LiveClock";
 
 const ThemedApp: React.FC = () => {
   const { theme } = useTheme();
@@ -21,6 +22,7 @@ const ThemedApp: React.FC = () => {
     <div className={theme === "dark" ? "dark-theme" : "light-theme"}>
       <UserForm />
       <Counter />
+      <LiveClock />
       <Timer />
       <ThemeSwitcher />
       <ExpensiveCalculation />
